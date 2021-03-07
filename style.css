@@ -13,9 +13,8 @@ body {
 
 div.contenu {
     background-color: white;
-    margin : 60px 10% 80px 10%;
-    padding: 0 30px 30px 30px;
-    min-width: 350px;
+    margin : 40px 0px 80px 0px;
+    padding: 0 0px 20px 0px;
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
@@ -68,17 +67,17 @@ table.info {
     width: 100%; 
     color: white; 
     background-color: #6c829bC0;
-    height: 80px;
+    height: 50px;
 }
 
 table.info td {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     vertical-align: top;
 }
 
 table.info th {
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 8px;
 }
@@ -92,7 +91,7 @@ img.info {
 }
 
 div.colonne {
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -106,11 +105,8 @@ div.colonne h2{
 
 div.colonne_1 {
     display: inline-block; 
-    margin-right: 10% ;
 }
-div.colonne_2 {
-    float: right;
-}
+
 
 div.ingredients p {
     border: 1px solid lightgrey;
@@ -128,6 +124,7 @@ table.preparation p.numero{
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    color: white;
     padding-top: 5px;
     box-sizing: border-box;
     border-radius: 50%;
@@ -138,6 +135,10 @@ table.preparation td {
     vertical-align: top;
 }
 
+table.preparation {
+    margin-left: 10%;
+}
+
 table.preparation td.preparation_etape {
     font-size: 14px;
     padding-left: 10px;
@@ -146,4 +147,60 @@ table.preparation td.preparation_etape {
 
 table.preparation tr {
     height: 40px ;
+}
+
+/* Style pour ordinateur*/
+@media only screen and (min-width: 768px) {
+    
+    div.contenu {
+        
+        margin : 60px 10% 80px 10%;
+        padding: 0 30px 30px 30px;
+        min-width: 350px; 
+
+    }
+    table.info {
+        
+        height: 80px;
+    }
+    
+    table.info td {
+        
+        font-size: 14px;
+        
+    }
+    
+    table.info th {
+        
+        font-size: 16px;
+        
+    }
+    div.colonne {
+        width: 45%;
+    }
+
+    div.colonne_1 {
+        margin-right: 10% ;
+    }
+
+    div.colonne_2 {
+        float: right;
+    }
+    table.preparation {
+        
+        margin-left: 0;
+    }
+}
+
+/* Style pour grand écran*/
+@media only screen and (min-width: 900px) {
+    div.contenu {
+        
+        /* fonctionne aussi comme ça   margin : 60px auto 80px auto;*/
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+
+    }
 }
